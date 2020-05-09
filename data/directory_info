@@ -1,0 +1,26 @@
+Directory containing data. The following files would be needed for full reproducibility in the following structure:
+
+├── directory_info
+├── gab
+│   └── GabHateCorpus_annotations.tsv
+├── jigsaw
+│   └── train.csv
+├── twitter
+│   └── anonymize
+│       ├── English
+│       │   └── corpus.tsv
+│       ├── Italian
+│       │   └── corpus.tsv
+│       ├── Polish
+│       │   └── corpus.tsv
+│       ├── Portuguese
+│       │   └── corpus.tsv
+│       └── Spanish
+│           └── corpus.tsv
+└── wiki
+    ├── aggression_annotated_comments.tsv
+    ├── aggression_annotations.tsv
+    ├── attack_annotated_comments.tsv
+    ├── attack_annotations.tsv
+    ├── toxicity_annotated_comments.tsv
+    └── toxicity_annotations.tsv

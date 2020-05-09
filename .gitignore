@@ -1,0 +1,27 @@
+# Python
+*.py[cod]
+
+# Packages
+*.egg
+*.egg-info
+
+# Data
+gab/
+jigsaw/
+twitter/
+wiki/
+
+# checkpoints
+checkpoints/
+*.tfevents.*
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Misc
+.DS_Store
+
+# numpy arrays
+*.npy
+*.h5
+*.json

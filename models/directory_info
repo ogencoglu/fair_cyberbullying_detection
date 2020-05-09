@@ -1,0 +1,11 @@
+Directory containing models.
+
+├── directory_info
+├── gab_constrained.h5
+├── gab_plain.h5
+├── jigsaw_constrained.h5
+├── jigsaw_plain.h5
+├── twitter_constrained.h5
+├── twitter_plain.h5
+├── wiki_constrained.h5
+└── wiki_plain.h5
