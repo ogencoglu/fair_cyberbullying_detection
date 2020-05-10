@@ -1,10 +1,10 @@
 Implementation of *Cyberbullying Detection with Fairness Constraints* - Gencoglu O. (2020)
 ====================
-This repository provides the full implementation with released models. 
+This repository provides the full implementation with released models. Requires *python 3.7* and *TensorFlow 2.0* (see *requirements.txt*). 
 
 Main Idea
 ====================
-*Can we mitigate the unintended bias of cyberbullying detection models by guiding the model training with fairness constraints?*
+**Can we mitigate the unintended bias of cyberbullying detection models by guiding the model training with fairness constraints?**
 
 .. raw:: html
 
