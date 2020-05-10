@@ -6,8 +6,9 @@ Main Idea
 ====================
 *Can we mitigate the unintended bias of cyberbullying detection models by guiding the model training with fairness constraints?*
 
-.. image:: https://github.com/ogencoglu/fair_cyberbullying_detection/blob/master/media/main_idea.png
-   :width: 400
+.. raw:: html
+
+    <img src="https://github.com/ogencoglu/fair_cyberbullying_detection/blob/master/media/main_idea.png" height="300px">
 
 Quick overview
 --------------
