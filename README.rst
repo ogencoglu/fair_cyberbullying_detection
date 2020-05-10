@@ -74,6 +74,24 @@ Relevant configurations are defined in *configs.py*, e.g.:
   --gab_allowed_fpr_deviation        0.15
   --random_state                     42
   
+*source* directory tree:
+
+.. code-block:: bash
+
+    ├── compare_models.ipynb
+    ├── configs.py
+    ├── embeddings.py
+    ├── evaluation.py
+    ├── gab_experiment.ipynb
+    ├── jigsaw_experiment.ipynb
+    ├── metrics.py
+    ├── model.py
+    ├── plot.py
+    ├── train.py
+    ├── twitter_experiment.ipynb
+    ├── utils.py
+    └── wiki_experiment.ipynb
+  
 Cite
 ====================
   
