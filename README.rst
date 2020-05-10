@@ -1,0 +1,72 @@
+Implementation of *Cyberbullying Detection with Fairness Constraints* - Gencoglu O. (2020)
+====================
+This repository provides the full implementation with released models. 
+
+Main Idea
+====================
+*Can we mitigate the unintended bias of cyberbullying detection models by guiding the model training with fairness constraints?*
+
+Quick overview
+--------------
+
+.. code-block:: python
+
+  # list group-specific FNRs/FPRs
+  fnrs = []
+  fprs = []
+  constraints = []
+  for iden in range(cf.num_identity_groups):
+      context_group_subset = context_group.subset(lambda kk=iden: group_tensor[:, kk] > 0)
+      fnrs.append(tfco.false_negative_rate(context_group_subset))
+      fprs.append(tfco.false_positive_rate(context_group_subset))
+
+  # define lower and upper bound constraints (see equation 3 in paper)
+  constraints.append(tfco.upper_bound(fnrs) - tfco.false_negative_rate(context) <= cf.gab_allowed_fnr_deviation)
+  constraints.append(tfco.upper_bound(fprs) - tfco.false_positive_rate(context) <= cf.gab_allowed_fpr_deviation)
+  constraints.append(tfco.false_negative_rate(context) - tfco.lower_bound(fnrs) <= cf.gab_allowed_fnr_deviation)
+  constraints.append(tfco.false_positive_rate(context) - tfco.lower_bound(fprs) <= cf.gab_allowed_fpr_deviation)
+
+  # define problem, optimizer and variables to optimize
+  problem = tfco.RateMinimizationProblem(objective, constraints)
+  optimizer = tfco.ProxyLagrangianOptimizerV2(
+      optimizer=tf.keras.optimizers.Adam(learning_rate),
+      constraint_optimizer=tf.keras.optimizers.Adam(learning_rate),
+      num_constraints=problem.num_constraints)
+  var_list = (constrained_model.trainable_weights + problem.trainable_variables + optimizer.trainable_variables())
+
+Example Results
+====================
+
+Quick Reprodution of Results
+====================
+1 - Get the data
+--------------
+See *directory_info* in the *data* directory for the expected directory structure.
+
+  -Jigsaw            `Link <https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification/data>`_
+  -Twitter           `Link <https://github.com/xiaoleihuang/Multilingual_Fairness_LREC/tree/master/data>`_
+  -Wiki              `Link <https://figshare.com/projects/Wikipedia_Talk/16731>`_
+  -Gab               `Link <https://osf.io/edua3/>`_
+2 - Download *unconstrained* and *constrained* models
+--------------
+`Download released models <https://drive.google.com/file/d/13i2dPf5FWw-NjUupbTMqvIJtZVJo_dGM/view?usp=sharing>`_ to *models* directory. See *directory_info* in the *model* directory for the expected directory structure.
+
+3 - Run *compare_models.ipynb*
+-------------------------------
+See *source* directory.
+
+Training From Scratch
+====================
+Run the corresponding notebook (e.g. *gab_experiment.ipynb*) for each experiment in the *source* directory for reproducing the full results from scratch. Note that the algorithms are non-determinisitic due to random weight initialization of the models.
+
+Relevant configurations are defined in *configs.py*, e.g.:
+
+  --batch_size                       128
+  --epochs                           75
+  --gab_allowed_fnr_deviation        0.10
+  --gab_allowed_fpr_deviation        0.15
+  --random_state                     42
+  
+Cite
+====================
+  
