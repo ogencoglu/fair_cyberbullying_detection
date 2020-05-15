@@ -1,4 +1,4 @@
-Implementation of *Cyberbullying Detection with Fairness Constraints* - Gencoglu O. (2020)
+Implementation of `Cyberbullying Detection with Fairness Constraints <https://arxiv.org/abs/2005.06625>`_ - Gencoglu O. (2020) 
 ====================
 This repository provides the full implementation with released models. Requires *python 3.7* and *TensorFlow 2.0* (see *requirements.txt*). 
 
@@ -95,3 +95,15 @@ Relevant configurations are defined in *configs.py*, e.g.:
 Cite
 ====================
   
+.. code-block::
+
+    @article{gencoglu2020cyberbullying,
+      title={Cyberbullying Detection with Fairness Constraints},
+      author={Gencoglu, Oguzhan},
+      journal={arXiv preprint arXiv:2005.06625},
+      year={2020}
+    }
+    
+Or
+
+    Gencoglu, Oguzhan. "Cyberbullying Detection with Fairness Constraints." arXiv preprint arXiv:2005.06625 (2020).
