@@ -25,10 +25,10 @@ Quick overview
       fprs.append(tfco.false_positive_rate(context_group_subset))
 
   # define lower and upper bound constraints (see equation 3 in paper)
-  constraints.append(tfco.upper_bound(fnrs) - tfco.false_negative_rate(context) <= cf.gab_allowed_fnr_deviation)
-  constraints.append(tfco.upper_bound(fprs) - tfco.false_positive_rate(context) <= cf.gab_allowed_fpr_deviation)
-  constraints.append(tfco.false_negative_rate(context) - tfco.lower_bound(fnrs) <= cf.gab_allowed_fnr_deviation)
-  constraints.append(tfco.false_positive_rate(context) - tfco.lower_bound(fprs) <= cf.gab_allowed_fpr_deviation)
+  constraints.append(tfco.upper_bound(fnrs) - tfco.false_negative_rate(context) <= allowed_fnr_deviation)
+  constraints.append(tfco.upper_bound(fprs) - tfco.false_positive_rate(context) <= allowed_fpr_deviation)
+  constraints.append(tfco.false_negative_rate(context) - tfco.lower_bound(fnrs) <= allowed_fnr_deviation)
+  constraints.append(tfco.false_positive_rate(context) - tfco.lower_bound(fprs) <= allowed_fpr_deviation)
 
   # define problem, optimizer and variables to optimize
   problem = tfco.RateMinimizationProblem(objective, constraints)
