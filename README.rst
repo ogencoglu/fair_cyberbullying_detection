@@ -44,7 +44,7 @@ Example Results
 .. image:: https://github.com/ogencoglu/fair_cyberbullying_detection/blob/master/media/result.png
    :width: 400
 
-Quick Reprodution of Results
+Quick Reproduction of Results
 ====================
 1 - Get the data
 --------------
