@@ -92,7 +92,7 @@ Relevant configurations are defined in *configs.py*, e.g.:
     ├── utils.py
     └── wiki_experiment.ipynb
   
-Cite
+`Cite <https://scholar.google.fi/scholar?hl=en&as_sdt=0%2C5&q=Cyberbullying+Detection+with+Fairness+Constraints&btnG=>`_
 ====================
   
 .. code-block::
