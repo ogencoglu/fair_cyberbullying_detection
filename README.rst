@@ -100,10 +100,14 @@ Relevant configurations are defined in *configs.py*, e.g.:
     @article{gencoglu2020cyberbullying,
       title={Cyberbullying Detection with Fairness Constraints},
       author={Gencoglu, Oguzhan},
-      journal={arXiv preprint arXiv:2005.06625},
-      year={2020}
+      journal={IEEE Internet Computing},
+      issn={1941-0131},
+      doi={10.1109/MIC.2020.3032461},
+      publisher={IEEE Computer Society},
+      year={2020},
+      note={Early Access}
     }
     
 Or
 
-    Gencoglu, Oguzhan. "Cyberbullying Detection with Fairness Constraints." arXiv preprint arXiv:2005.06625 (2020).
+    Gencoglu, Oguzhan. "Cyberbullying Detection with Fairness Constraints." *IEEE Internet Computing* (2020). DOI:10.1109/MIC.2020.3032461
