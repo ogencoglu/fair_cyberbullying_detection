@@ -92,22 +92,23 @@ Relevant configurations are defined in *configs.py*, e.g.:
     ├── utils.py
     └── wiki_experiment.ipynb
   
-`Cite <https://scholar.google.fi/scholar?hl=en&as_sdt=0%2C5&q=Cyberbullying+Detection+with+Fairness+Constraints&btnG=>`_
+`Cite <https://ieeexplore.ieee.org/document/9233943>`_
 ====================
   
 .. code-block::
 
-    @article{gencoglu2020cyberbullying,
+    @article{gencoglu2021cyberbullying,
       title={Cyberbullying Detection with Fairness Constraints},
       author={Gencoglu, Oguzhan},
       journal={IEEE Internet Computing},
-      issn={1941-0131},
       doi={10.1109/MIC.2020.3032461},
+      pages={20-29},
+      volume={25},
+      number={1},
       publisher={IEEE Computer Society},
-      year={2020},
-      note={Early Access}
+      year={2021}
     }
     
 Or
 
-    Gencoglu, Oguzhan. "Cyberbullying Detection with Fairness Constraints." *IEEE Internet Computing* (2020). DOI:10.1109/MIC.2020.3032461
+    Gencoglu, Oguzhan. "Cyberbullying Detection with Fairness Constraints." *IEEE Internet Computing* (2020) vol. 25, no. 1, pp. 20-29. doi:10.1109/MIC.2020.3032461
