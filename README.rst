@@ -102,7 +102,7 @@ Relevant configurations are defined in *configs.py*, e.g.:
       author={Gencoglu, Oguzhan},
       journal={IEEE Internet Computing},
       doi={10.1109/MIC.2020.3032461},
-      pages={20-29},
+      pages={20--29},
       volume={25},
       number={1},
       publisher={IEEE Computer Society},
